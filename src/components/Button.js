@@ -18,6 +18,14 @@ function Button({ type, children }) {
     width: "30px",
     height: "30px",
   };
+
+  const play = {
+    position: "absolute",
+    borderRadius: "50%",
+    width: "50px",
+    height: "50px",
+    backgroundColor: "white",
+  };
   let css = {};
   switch (type) {
     case "icon":
@@ -28,6 +36,9 @@ function Button({ type, children }) {
       break;
     case "icon-round":
       css = roundIcon;
+      break;
+    case "play":
+      css = play;
       break;
     default:
       css = {};
