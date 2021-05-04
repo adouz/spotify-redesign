@@ -1,21 +1,39 @@
 import Search from "./Search";
 import Button from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faArrowLeft,
   faArrowRight,
   faPlay,
 } from "@fortawesome/free-solid-svg-icons";
+import { useRef } from "react";
 
 function Home() {
+  const madeForYou = useRef(null);
+  const recently = useRef(null);
   const arr = [
-    "https://www.androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?src=https%3A%2F%2Fwww.androidpolice.com%2Fwp-content%2Fuploads%2F2020%2F09%2F28%2FSpotifySimpleHero-01.png&w=728",
+    "https://wi.wallpapertip.com/wsimgs/50-505075_spotify-playlist-covers-chill.jpg",
+    "https://wi.wallpapertip.com/wsimgs/50-505075_spotify-playlist-covers-chill.jpg",
+    "https://wi.wallpapertip.com/wsimgs/50-505075_spotify-playlist-covers-chill.jpg",
+    "https://wi.wallpapertip.com/wsimgs/50-505075_spotify-playlist-covers-chill.jpg",
+    "https://wi.wallpapertip.com/wsimgs/50-505075_spotify-playlist-covers-chill.jpg",
     "https://wi.wallpapertip.com/wsimgs/50-505075_spotify-playlist-covers-chill.jpg",
     "https://wi.wallpapertip.com/wsimgs/50-505075_spotify-playlist-covers-chill.jpg",
     "https://wi.wallpapertip.com/wsimgs/50-505075_spotify-playlist-covers-chill.jpg",
     "https://wi.wallpapertip.com/wsimgs/50-505075_spotify-playlist-covers-chill.jpg",
   ];
 
+  const slideLeft = (frame, offset) => {
+    console.log(`slideLeft`);
+    frame.current.scrollLeft -= offset;
+  };
+
+  const slideRight = (frame, offset) => {
+    console.log(`slideRight`);
+    frame.current.scrollLeft += offset;
+
+  };
   return (
     <div style={{ gridArea: "main" }} className="col-span-2 mt-5 mx-5">
       <div className="flex flex-nowrap justify-between">
@@ -39,31 +57,74 @@ function Home() {
         <span className="text-lg font-bold">Made for you</span>
         <div>
           <span style={{ opacity: "0.5" }}>
-            <Button type="icon-round">
+            <Button onClick={() => slideLeft(madeForYou, 300)} type="icon-round">
               <FontAwesomeIcon className="text-xs" icon={faArrowLeft} />
             </Button>
           </span>
-          <Button type="icon-round">
+          <Button onClick={() => slideRight(madeForYou, 300)} type="icon-round">
             <FontAwesomeIcon className="text-xs" icon={faArrowRight} />
           </Button>
         </div>
       </div>
-      <div className="flex flex-row justify-evenly">
+      <div
+        ref={madeForYou}
+        className="grid gap-8 justify-items-center mb-10"
+        style={{
+          gridTemplateColumns: "repeat(auto-fit, minmax(17rem,1fr))",
+          gridAutoFlow: "column",
+          overflow: "hidden",
+          scrollBehavior: 'smooth'
+        }}
+      >
         {arr.map((e, i) => (
-          <div key={i} className="w-56 h-56">
+          <div key={i} style={{ minWidth: "17rem", position: "relative" }}>
             <Button type="play">
-              <FontAwesomeIcon className="text-xs" icon={faPlay} />
+              <FontAwesomeIcon style={{ fontSize: '1rem' }} className="text-xs" icon={faPlay} />
             </Button>
             <img
-              className="rounded-xl"
+              className="rounded-xl img"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
               src={e}
-            />
+            ></img>
           </div>
         ))}
       </div>
-      <div></div>
-      <div></div>
+      <div className="flex flex-nowrap justify-between my-4">
+        <span className="text-lg font-bold">Recently played</span>
+        <div>
+          <span style={{ opacity: "0.5" }}>
+            <Button onClick={() => slideLeft(recently, 240)} type="icon-round">
+              <FontAwesomeIcon className="text-xs" icon={faArrowLeft} />
+            </Button>
+          </span>
+          <Button onClick={() => slideRight(recently, 240)} type="icon-round">
+            <FontAwesomeIcon className="text-xs" icon={faArrowRight} />
+          </Button>
+        </div>
+      </div>
+      <div
+        ref={recently}
+        className="grid gap-8 justify-items-center mb-10"
+        style={{
+          gridTemplateColumns: "repeat(auto-fit, minmax(13rem,1fr))",
+          gridAutoFlow: "column",
+          overflow: "hidden",
+          scrollBehavior: 'smooth'
+        }}
+      >
+        {arr.map((e, i) => (
+          <div key={i} style={{ minWidth: "13rem", position: "relative" }}>
+            <Button type="play">
+              <FontAwesomeIcon style={{ fontSize: '1rem' }} className="text-xs" icon={faPlay} />
+            </Button>
+            <img
+              className="rounded-xl img"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              src={e}
+            ></img>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

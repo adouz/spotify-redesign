@@ -1,4 +1,4 @@
-function Button({ type, children }) {
+function Button(props) {
   const icon = {
     backgroundColor: "transparent",
     border: "none",
@@ -22,12 +22,16 @@ function Button({ type, children }) {
   const play = {
     position: "absolute",
     borderRadius: "50%",
-    width: "50px",
-    height: "50px",
-    backgroundColor: "white",
+    width: "60px",
+    height: "60px",
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    backgroundColor: 'rgb(255,255,255, 0.7)',
+    backdropFilter: 'blur(4px)'
   };
   let css = {};
-  switch (type) {
+  switch (props.type) {
     case "icon":
       css = icon;
       break;
@@ -43,7 +47,12 @@ function Button({ type, children }) {
     default:
       css = {};
   }
-  return <button style={css}>{children}</button>;
+  return (
+    <button className="button" {...props} style={css}>
+      {props.children}
+    </button>
+
+  );
 }
 
 export default Button;

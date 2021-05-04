@@ -8,7 +8,7 @@ function App() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "auto 1fr",
+          gridTemplateColumns: "auto minmax(50%, 1fr)",
           gridTemplateAreas: '"side-bar main"',
           gap: "1.5rem",
         }}
