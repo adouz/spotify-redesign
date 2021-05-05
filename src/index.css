@@ -7,3 +7,67 @@ body {
   font-family: "Open Sans", sans-serif;
   background-color: #f1f3f6;
 }
+
+*:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.playbutton {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+/* .playlistcover {
+  border: 0.5rem solid;
+  background-color: black;
+  border-radius: 8%;
+} */
+.playlistTitle{
+  position: absolute;
+  top: 80%;
+  left: 0%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.playlistcover {
+  border: 0rem solid;
+  background-color: black;
+  border-radius: 3%;
+  transition: 0.5s;
+
+}
+.TitleBackground {
+  position: absolute;
+  width: 100%;
+  top: 75%;
+  height: 25%;
+  background: linear-gradient(transparent, #000);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.playlistcover:hover .TitleBackground {
+  opacity: 1;
+}
+
+.playlistcover:hover .playbutton {
+  opacity: 1;
+}
+
+.playlistcover:hover {
+  border: 0.5rem solid;
+  border-radius: 8%;
+}
+
+.playlistcover:hover .playlistTitle{
+  /* top: 80%;
+  left: 3%; */
+
+  left: 3%;
+  opacity: 1;
+}

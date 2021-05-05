@@ -48,7 +48,7 @@ function Button(props) {
       css = {};
   }
   return (
-    <button className="button" {...props} style={css}>
+    <button {...props} className={`button ${props.type == 'play' ? 'playbutton' : ''}`} style={css}>
       {props.children}
     </button>
 
