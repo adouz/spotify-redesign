@@ -3,6 +3,10 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
+:root {
+  --transtime: 0.3s;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #f1f3f6;
@@ -18,7 +22,7 @@ button:focus {
 
 .playbutton {
   opacity: 0;
-  transition: 0.5s;
+  transition: var(--transtime);
 }
 
 /* .playlistcover {
@@ -26,29 +30,29 @@ button:focus {
   background-color: black;
   border-radius: 8%;
 } */
-.playlistTitle{
+.playlistTitle {
   position: absolute;
   top: 80%;
   left: 0%;
   opacity: 0;
-  transition: 0.5s;
+  transition: var(--transtime);
 }
 
 .playlistcover {
   border: 0rem solid;
-  background-color: black;
-  border-radius: 3%;
-  transition: 0.5s;
-
+  background-color: none;
+  border-radius: 8%;
+  transition: var(--transtime);
+  overflow: hidden;
 }
 .TitleBackground {
   position: absolute;
   width: 100%;
   top: 75%;
-  height: 25%;
+  height: 35%;
   background: linear-gradient(transparent, #000);
   opacity: 0;
-  transition: 0.5s;
+  transition: var(--transtime);
 }
 
 .playlistcover:hover .TitleBackground {
@@ -59,15 +63,15 @@ button:focus {
   opacity: 1;
 }
 
-.playlistcover:hover {
+/* .playlistcover:hover {
   border: 0.5rem solid;
   border-radius: 8%;
-}
+} */
 
-.playlistcover:hover .playlistTitle{
+.playlistcover:hover .playlistTitle {
   /* top: 80%;
   left: 3%; */
 
-  left: 3%;
+  left: 5%;
   opacity: 1;
 }
