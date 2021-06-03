@@ -26,8 +26,7 @@ function Home() {
     "https://daily-mix.scdn.co/covers/on_repeat/PZN_On_Repeat2_DEFAULT-en.jpg",
     "https://daily-mix.scdn.co/covers/backtracks/PZN_Repeat_Rewind2_DEFAULT-en.jpg",
     "https://lineup-images.scdn.co/summer-rewind-2020_DEFAULT-en.jpg",
-    "https://misc.scdn.co/liked-songs/liked-songs-300.png"
-
+    "https://misc.scdn.co/liked-songs/liked-songs-300.png",
   ];
 
   const slideLeft = (frame, offset) => {
@@ -38,15 +37,14 @@ function Home() {
   const slideRight = (frame, offset) => {
     console.log(`slideRight`);
     frame.current.scrollLeft += offset;
-
   };
   return (
-    <div style={{ gridArea: "main" }} className="col-span-2 mt-5 mx-5">
+    <div style={{ gridArea: "main" }} className="col-span-2 mt-5 ml-5">
       <div className="flex flex-nowrap justify-between">
         <div style={{ width: "20rem" }}>
           <Search placeholder="Search" />
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mr-5">
           <span className="font-bold text-sm mr-3">Abdellatif Douz</span>
           <div className="w-8">
             <img
@@ -61,9 +59,12 @@ function Home() {
       </div>
       <div className="flex flex-nowrap justify-between my-4">
         <span className="text-lg font-bold">Made for you</span>
-        <div>
+        <div className="mr-5">
           <span style={{ opacity: "0.5" }}>
-            <Button onClick={() => slideLeft(madeForYou, 300)} type="icon-round">
+            <Button
+              onClick={() => slideLeft(madeForYou, 300)}
+              type="icon-round"
+            >
               <FontAwesomeIcon className="text-xs" icon={faArrowLeft} />
             </Button>
           </span>
@@ -79,30 +80,47 @@ function Home() {
           gridTemplateColumns: "repeat(auto-fit, minmax(17rem,1fr))",
           gridAutoFlow: "column",
           overflow: "hidden",
-          scrollBehavior: 'smooth'
+          scrollBehavior: "smooth",
         }}
       >
-        {arr.map((e, i) => (
-          <div className="playlistcover" key={i} style={{ minWidth: "17rem", position: "relative" }}>
-            <Button type="play">
-              <FontAwesomeIcon style={{ fontSize: '1rem' }} className="text-xs" icon={faPlay} />
-            </Button>
-            <img
-              className="rounded-xl img"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              src={e}
-            ></img>
-            <div className="TitleBackground" />
-            <div className="playlistTitle">
-              <p style={{ fontWeight: 'bold', color: 'white' }}>Title of the playlist</p>
-              <span style={{ fontSize: '.8rem', color: 'rgb(255,255,255,.7)' }}>Title of the playlist</span>
+        {arr
+          .slice(0)
+          .reverse()
+          .map((e, i) => (
+            <div
+              className="playlistcover"
+              key={i}
+              style={{ minWidth: "17rem", position: "relative" }}
+            >
+              <Button type="play">
+                <FontAwesomeIcon
+                  style={{ fontSize: "1rem" }}
+                  className="text-xs"
+                  icon={faPlay}
+                />
+              </Button>
+              <img
+                className="rounded-xl img"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                src={e}
+              ></img>
+              <div className="TitleBackground" />
+              <div className="playlistTitle">
+                <p style={{ fontWeight: "bold", color: "white" }}>
+                  Title of the playlist
+                </p>
+                <span
+                  style={{ fontSize: ".8rem", color: "rgb(255,255,255,.7)" }}
+                >
+                  Title of the playlist
+                </span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
       <div className="flex flex-nowrap justify-between my-4">
         <span className="text-lg font-bold">Recently played</span>
-        <div>
+        <div className="mr-5">
           <span style={{ opacity: "0.5" }}>
             <Button onClick={() => slideLeft(recently, 240)} type="icon-round">
               <FontAwesomeIcon className="text-xs" icon={faArrowLeft} />
@@ -120,13 +138,21 @@ function Home() {
           gridTemplateColumns: "repeat(auto-fit, minmax(13rem,1fr))",
           gridAutoFlow: "column",
           overflow: "hidden",
-          scrollBehavior: 'smooth'
+          scrollBehavior: "smooth",
         }}
       >
         {arr.map((e, i) => (
-          <div className="playlistcover" key={i} style={{ minWidth: "13rem", position: "relative" }}>
+          <div
+            className="playlistcover"
+            key={i}
+            style={{ minWidth: "13rem", position: "relative" }}
+          >
             <Button type="play">
-              <FontAwesomeIcon style={{ fontSize: '1rem' }} className="text-xs" icon={faPlay} />
+              <FontAwesomeIcon
+                style={{ fontSize: "1rem" }}
+                className="text-xs"
+                icon={faPlay}
+              />
             </Button>
             <img
               className="rounded-xl img"

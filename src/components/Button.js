@@ -18,17 +18,23 @@ function Button(props) {
     width: "30px",
     height: "30px",
   };
-
+  const playerIcon = {
+    color: "black",
+    borderRadius: "50%",
+    backgroundColor: "#1ED861",
+    width: "45px",
+    height: "45px",
+  };
   const play = {
     position: "absolute",
     borderRadius: "50%",
     width: "60px",
     height: "60px",
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    backgroundColor: 'rgb(255,255,255, 0.7)',
-    backdropFilter: 'blur(4px)'
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    backgroundColor: "rgb(255,255,255, 0.7)",
+    backdropFilter: "blur(4px)",
   };
   let css = {};
   switch (props.type) {
@@ -44,14 +50,20 @@ function Button(props) {
     case "play":
       css = play;
       break;
+    case "player":
+      css = playerIcon;
+      break;
     default:
       css = {};
   }
   return (
-    <button {...props} className={`button ${props.type == 'play' ? 'playbutton' : ''}`} style={css}>
+    <button
+      {...props}
+      className={`button ${props.type == "play" ? "playbutton" : ""}`}
+      style={css}
+    >
       {props.children}
     </button>
-
   );
 }
 
