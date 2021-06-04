@@ -41,7 +41,7 @@ function Player() {
         }}
         className="flex flex-row items-center justify-between"
       >
-        <div className="flex flex-row" width={{ height: "66px" }}>
+        <div className="flex flex-row" style={{ height: "66px" }}>
           <img
             style={{ width: "60px", borderRadius: "1rem" }}
             src="https://i.scdn.co/image/ab67616d00001e021d97ca7376f835055f828139"
