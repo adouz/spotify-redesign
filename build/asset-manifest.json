@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.86bfb63b.chunk.css",
-    "main.js": "/static/js/main.5ae50d38.chunk.js",
-    "main.js.map": "/static/js/main.5ae50d38.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d4cdffd4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d4cdffd4.js.map",
-    "static/js/2.0a1640df.chunk.js": "/static/js/2.0a1640df.chunk.js",
-    "static/js/2.0a1640df.chunk.js.map": "/static/js/2.0a1640df.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.86bfb63b.chunk.css.map": "/static/css/main.86bfb63b.chunk.css.map",
-    "static/js/2.0a1640df.chunk.js.LICENSE.txt": "/static/js/2.0a1640df.chunk.js.LICENSE.txt",
-    "static/media/Spotify_logo_with_text.4f8bc335.svg": "/static/media/Spotify_logo_with_text.4f8bc335.svg"
+    "main.css": "/spotify-redesign/static/css/main.86bfb63b.chunk.css",
+    "main.js": "/spotify-redesign/static/js/main.5ae50d38.chunk.js",
+    "main.js.map": "/spotify-redesign/static/js/main.5ae50d38.chunk.js.map",
+    "runtime-main.js": "/spotify-redesign/static/js/runtime-main.eefe0769.js",
+    "runtime-main.js.map": "/spotify-redesign/static/js/runtime-main.eefe0769.js.map",
+    "static/js/2.0a1640df.chunk.js": "/spotify-redesign/static/js/2.0a1640df.chunk.js",
+    "static/js/2.0a1640df.chunk.js.map": "/spotify-redesign/static/js/2.0a1640df.chunk.js.map",
+    "index.html": "/spotify-redesign/index.html",
+    "static/css/main.86bfb63b.chunk.css.map": "/spotify-redesign/static/css/main.86bfb63b.chunk.css.map",
+    "static/js/2.0a1640df.chunk.js.LICENSE.txt": "/spotify-redesign/static/js/2.0a1640df.chunk.js.LICENSE.txt",
+    "static/media/Spotify_logo_with_text.4f8bc335.svg": "/spotify-redesign/static/media/Spotify_logo_with_text.4f8bc335.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d4cdffd4.js",
+    "static/js/runtime-main.eefe0769.js",
     "static/js/2.0a1640df.chunk.js",
     "static/css/main.86bfb63b.chunk.css",
     "static/js/main.5ae50d38.chunk.js"

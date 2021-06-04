@@ -1,5 +1,6 @@
 {
   "name": "spotify-redesign",
+  "homepage": "https://adouz.github.io/spotify-redesign/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
