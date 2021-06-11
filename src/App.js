@@ -1,7 +1,7 @@
 import "./App.css";
-import Sidebar from "./components/Sidebar.js";
-import Home from "./components/Home.js";
-import Player from "./components/Player.js";
+import Sidebar from "./components/Sidebar";
+import Home from "./components/Home";
+import Player from "./components/Player";
 
 function App() {
   return (

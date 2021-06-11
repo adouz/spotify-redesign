@@ -1,5 +1,5 @@
-import Search from "./Search";
-import Button from "./Button";
+import Search from "../Search";
+import Button from "../Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {

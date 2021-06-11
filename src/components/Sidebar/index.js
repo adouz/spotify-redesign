@@ -1,5 +1,5 @@
-import logo from "../assets/Spotify_logo_with_text.svg";
-import Button from "./Button";
+import logo from "../../assets/Spotify_logo_with_text.svg";
+import Button from "../Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEllipsisV,
