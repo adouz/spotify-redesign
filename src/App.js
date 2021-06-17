@@ -1,6 +1,6 @@
 import "./App.css";
 import Sidebar from "./components/Sidebar";
-import Home from "./components/Home";
+import Main from "./components/Main";
 import Player from "./components/Player";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         }}
       >
         <Sidebar />
-        <Home />
+        <Main />
         <Player />
       </div>
     </div>

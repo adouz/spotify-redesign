@@ -34,7 +34,7 @@ button:focus {
   background-color: black;
   border-radius: 8%;
 } */
-.playlistTitle {
+/* .playlistTitle {
   position: absolute;
   top: 80%;
   left: 0%;
@@ -61,7 +61,7 @@ button:focus {
 
 .playlistcover:hover .TitleBackground {
   opacity: 1;
-}
+} */
 
 .playlistcover:hover .playbutton {
   opacity: 1;
@@ -72,13 +72,11 @@ button:focus {
   border-radius: 8%;
 } */
 
-.playlistcover:hover .playlistTitle {
-  /* top: 80%;
-  left: 3%; */
+/* .playlistcover:hover .playlistTitle {
 
   left: 5%;
   opacity: 1;
-}
+} */
 
 /** custome player slider **/
 /*https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/*/

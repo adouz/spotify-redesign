@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 function Button(props) {
   const icon = {
     backgroundColor: "transparent",
