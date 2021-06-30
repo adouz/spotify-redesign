@@ -14,7 +14,7 @@ const Navbar = ({ name, avatar }) => {
       <div className="flex items-center mr-5">
         <span className="font-bold text-sm mr-3">{name}</span>
         <div className="w-8">
-          <img className="rounded-full" src={avatar} />
+          <img className="rounded-full" src={avatar} alt="user-full-name" />
         </div>
       </div>
     </div>

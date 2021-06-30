@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import Button from "../Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlay,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
 const transTime = "0.3s";
@@ -71,6 +69,7 @@ const Covers = React.forwardRef(({ playlists }, ref) => {
             />
           </Button>
           <img
+            alt="playlist-cover"
             className="rounded-xl img"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             src={e}
@@ -88,5 +87,5 @@ const Covers = React.forwardRef(({ playlists }, ref) => {
       ))}
     </Wrapper>
   );
-})
+});
 export default Covers;
