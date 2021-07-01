@@ -7,6 +7,7 @@ import {
   faWindowRestore,
   faBroadcastTower,
 } from "@fortawesome/free-solid-svg-icons";
+import Wrapper from "./Wrapper";
 
 function Sidebar() {
   const menu = [
@@ -26,10 +27,7 @@ function Sidebar() {
 
   const playlists = ["Liked Songs"];
   return (
-    <div
-      style={{ gridArea: "side-bar" }}
-      className="w-52 flex flex-col mx-3 mt-5"
-    >
+    <Wrapper className="w-52 flex flex-col mx-3 mt-5">
       <div className="flex flex-nowrap justify-between mb-5">
         <img src={logo} alt="logo" className="w-32" />
         <Button type="icon">
@@ -75,7 +73,7 @@ function Sidebar() {
           <span className="font-bold text-sm">New Playlist</span>
         </Button>
       </div>
-    </div>
+    </Wrapper>
   );
 }
 
